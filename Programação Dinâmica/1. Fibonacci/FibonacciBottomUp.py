@@ -1,4 +1,4 @@
-# Implementing the Top-Down method in Fibonacci's series
+# Implementing the Bottom-Up method in Fibonacci's series
 
 
 def Fib(k):
