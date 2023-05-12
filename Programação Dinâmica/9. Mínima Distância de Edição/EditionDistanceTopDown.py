@@ -18,38 +18,60 @@ def Header():
     l()
     print(f'\n{"Author: Vítor Sallenave Sales Milome":^75}\n')
     l()
-    print('\n')
+    print('\b')
 
 
 def ReadStrings():
     string1 = str(input('Digite a primeira frase: ')).strip().lower()
     string2 = str(input('Digite a segunda frase: ')).strip().lower()
-    print('\n')
+    print('\b')
     l()
 
     return string1, string2
 
 
-def D(ph1, i, ph2, j):
+def CreateMatrix(lin, col):
+    return [[-1 for _ in range(col)] for _ in range(lin)]
+
+
+def PrintMatrix(mat):
+    li, co = len(mat), len(mat[0])
+
+    l()
+    print('\nMemory: \n')
+    for i in range(li):
+        line = list()
+        for j in range(co):
+            line.append(mat[i][j])
+        print(f'\t{line}')
+    print('\b')
+    l()
+
+
+def D(ph1, i, ph2, j, memory):
     if i < 0 or j < 0:
         return 0
     else:
         if ph1[i] == ph2[j]:
-            return D(ph1, i-1, ph2, j-1)
+            memory[i][j] = D(ph1, i-1, ph2, j-1, memory)
         else:
             # Possible operations
-            deleteA = D(ph1, i-1, ph2, j)
-            insertA = D(ph1, i, ph2, j-1)
-            exchangeAB = D(ph1, i-1, ph2, j-1)
+            deleteA = D(ph1, i-1, ph2, j, memory)
+            insertA = D(ph1, i, ph2, j-1, memory)
+            exchangeAB = D(ph1, i-1, ph2, j-1, memory)
 
-            return min(deleteA, insertA, exchangeAB) + 1
+            memory[i][j] = min(deleteA, insertA, exchangeAB) + 1
+
+    return memory[i][j]
             
 
 def main():
     Header()
     str1, str2 = ReadStrings()
     x, y = len(str1)-1, len(str2)-1
-    print(f'The number of operations to transform the first phrase into the second one is: {D(str1, x, str2, y)}\n')
+    memory = CreateMatrix(x+1, y+1)
+    answer = D(str1, x, str2, y, memory)
+    print(f'\nThe number of operations to transform the first phrase into the second one is: {answer}\n')
 
 
 main()

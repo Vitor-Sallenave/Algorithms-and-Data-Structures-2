@@ -17,7 +17,7 @@ def ReadData():
     line()
     n = int(input('\nType a value for n: '))
     p = int(input('\nType a value for p: '))
-    print('\n')
+    print('\b')
 
     return n, p
 
@@ -43,21 +43,24 @@ def PrintMatrix(mat):
 def DivideInt(p, x, memo):
     if x < 0 or p < 0:
         memo[p][x] = 0
-    if x == 0:
+    elif x == 0:
         memo[p][x] = 1
     else:
         if memo[p][x] == -1:
-            use_num = DivideInt(x - p, p, memo)
-            pass_num = DivideInt(x, p - 1, memo)
-            memo[p][x] = use_num + pass_num
+            if x >= p:
+                use_num = DivideInt(x - p, p, memo)
+                pass_num = DivideInt(x, p - 1, memo)
+                memo[p][x] = use_num + pass_num
+            else:
+                memo[p][x] = DivideInt(x, p - 1, memo)
 
-    return memo[p][x], memo
+    return memo[p][x]
 
 
 def main():
     n, p = ReadData()
     memory = CreateMatrix(n+1, p+1)
-    answer, memory = DivideInt(p, n, memory)
+    answer = DivideInt(p, n, memory)
     PrintMatrix(memory)
     print(f'\nThe number of ways you can divide {n} is {answer}')
 
