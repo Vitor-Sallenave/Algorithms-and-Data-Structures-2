@@ -1,29 +1,25 @@
 from time import time
 
 
-def Cabecalho():
+def line():
+    print('==' * 40)
+
+
+def Header():
     print('\n')
-    print('==' * 40)
-    print('\n\tAutores: Vítor Sallenave Sales Milome e Nicolas Pereira Ribeiro\n')
-    print('==' * 40)
+    line()
+    print('\n\tAuthors: Vítor Sallenave Sales Milome e Nicolas Pereira Ribeiro\n')
+    line()
     print('\n')
 
 
 def LeArquivo(nome, modo):
     with open(nome, modo) as arq:
-        vetor = list(map(lambda x: int(x), arq.readlines()))
-    return vetor
+        v = list(map(lambda x: int(x), arq.readlines()))
+    return v
 
 
-def Particione(v, a, b):
-    """
-    :param v: vetor
-    :param a: posição inicial
-    :param b: posição final
-    :return: posição q do vetor tal que A[a...q-1] <= A[q] < A[q+1...b].
-
-    """
-
+def Partition(v, a, b):
     # Pivô -> último elemento do vetor
     pivo = v[b]
 
@@ -32,28 +28,18 @@ def Particione(v, a, b):
     for j in range(a, b):
         if v[j] <= pivo:
             i += 1
-            aux = v[i]
-            v[i] = v[j]
-            v[j] = aux
+            # Troca os valores
+            v[i], v[j] = v[j], v[i]
 
-    aux2 = v[i + 1]
-    v[i + 1] = v[b]
-    v[b] = aux2
+    v[i + 1], v[b] = v[b], v[i + 1]
 
-    return i + 1
+    return i
 
 
 def QuickSort(v, i, f):
-    """
-    :param v: vetor
-    :param i: posição inicial
-    :param f: posição final
-
-    """
-
     if i < f:
-        p = Particione(v, i, f)
-        QuickSort(v, i, p - 1)
+        p = Partition(v, i, f)
+        QuickSort(v, i, p)
         QuickSort(v, p + 1, f)
 
 
@@ -72,7 +58,7 @@ def main():
     end2 = time()
 
     # Resultados
-    Cabecalho()
+    Header()
     print(f'Tempo do QuickSort com 500 entradas NÃO ordenadas: {(end2 - start2):.8f} s\n')
     print(f'Tempo do QuickSort com 1000000 entradas NÃO ordenadas: {(end1 - start1):.8f} s\n')
 

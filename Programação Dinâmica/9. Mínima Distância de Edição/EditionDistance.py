@@ -1,4 +1,4 @@
-'''
+"""
 
 ===========================================================================
 Problem: Given two arrays: A e B, you need to determine the minimum
@@ -6,7 +6,7 @@ operations number in order to transform A into B.
 The possible operations are: insert, delete or exchange a char.
 ===========================================================================
 
-'''
+"""
 
 
 def l():

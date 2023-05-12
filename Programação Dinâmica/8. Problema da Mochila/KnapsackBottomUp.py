@@ -12,10 +12,16 @@ def line():
     print('==' * 40)
 
 
-def ReadData():
+def Header():
     print('\n')
     line()
-    x = int(input("\nType the knapsack's weight: "))
+    print(f'\n{"Author: Vítor Sallenave Sales Milome":^75}\n')
+    line()
+    print('\n')
+
+
+def ReadData():
+    x = int(input("Type the knapsack's weight: "))
     y = list(map(lambda e: int(e), input("\nType the items' weights: ").split()))
     z = list(map(lambda e: int(e), input("\nType the items' values: ").split()))
     if len(y) != len(z):
@@ -45,7 +51,7 @@ def PrintMatrix(mat, wghts, vals):
         for j in range(co):
             l.append(mat[i][j])
         print(f'\t{l}')
-    print('\n')
+    print('\b')
     line()
 
 
@@ -56,7 +62,7 @@ def Knapsack(w, i, weights, values, memory):
         memory[c][0] = 0
 
     # Filling the memory
-    for a in range(1, i+1):
+    for a in range(i+1):
         for b in range(1, w+1):
             if weights[a] <= b:
                 # There are two possibilities: add or not the item
@@ -70,6 +76,7 @@ def Knapsack(w, i, weights, values, memory):
 
 
 def main():
+    Header()
     weight, weights, values = ReadData()
     k = len(weights) - 1
     memo = CreateMatrix(k+1, weight)
