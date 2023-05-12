@@ -3,7 +3,7 @@
 
 def Fib(k):
     # Trivial cases
-    memo.append(1)
+    memo.append(0)
     memo.append(1)
 
     # Keep building an array for memorization
@@ -17,6 +17,6 @@ memo = list()
 print('==' * 40)
 x = int(input("Which position from Fibonacci's series do you want to know? "))
 print('==' * 40)
-print(f"The {x}° value from Fibonacci's series is {Fib(x - 1)}")
+print(f"The {x}° value from Fibonacci's series is {Fib(x)}")
 print('==' * 40)
 print(f'Memo filled: {memo}')
