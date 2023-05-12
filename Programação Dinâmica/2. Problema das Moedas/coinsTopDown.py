@@ -17,7 +17,14 @@ def Header():
     l()
     print(f'\n{"Author: Vítor Sallenave Sales Milome":^75}\n')
     l()
-    print('\n')
+    print('\b')
+
+
+def ReadChange():
+    x = int(input('Type the payment value: '))
+    print('\b')
+    l()
+    return x
 
 
 def T(v, p, n):
@@ -27,7 +34,9 @@ def T(v, p, n):
         if n == 0:
             return 1
         else:
-            return T(v, p, n - v[p]) + T(v, p-1, n)
+            use_coin = T(v, p, n - v[p])
+            pass_coin = T(v, p-1, n)
+            return use_coin + pass_coin
 
 
 def main():
@@ -36,11 +45,9 @@ def main():
     v = [1, 5, 10, 25, 50, 100]
     # m coins
     m = len(v)
-    n = int(input('Type the payment value: '))
-    print('\n')
-    l()
+    n = ReadChange()
     answer = T(v, m-1, n)
-    print(f'Distinct ways of giving the {n} change with these {m} coins: {answer}\n')
+    print(f'\nDistinct ways of giving the {n} change with these {m} coins: {answer}\n')
 
 
 main()

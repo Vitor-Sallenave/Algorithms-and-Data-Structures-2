@@ -17,11 +17,13 @@ def Header():
     l()
     print(f'\n{"Author: Vítor Sallenave Sales Milome":^75}\n')
     l()
-    print('\n')
+    print('\b')
 
 
 def ReadChange():
-    return int(input('Type the payment value: '))
+    x = int(input('Type the payment value: '))
+    print('\b')
+    return x
 
 
 def CreateMatrix(i, j, value):
@@ -64,7 +66,10 @@ def Change(v, m, n):
     for i in range(2, m+1):
         for j in range(n+1):
             if j >= v[i - 1]:
-                matrix[i][j] = matrix[i][j - v[i-1]] + matrix[i-1][j]
+                # There are two possibilities: use or not the coin
+                use_num = matrix[i][j - v[i-1]]
+                pass_num = matrix[i-1][j]
+                matrix[i][j] = use_num + pass_num
             else:
                 matrix[i][j] = matrix[i-1][j]
 
@@ -76,11 +81,9 @@ def main():
     coins = [1, 5, 10, 25, 50, 100]
     m = len(coins)
     n = ReadChange()
-    print('\n')
     table, answer = Change(coins, m, n)
     PrintMatrix(table)
-    print(f'There are {answer} different ways of giving a {n} change with these {m} coins')
-    l()
+    print(f'\nThere are {answer} different ways of giving a {n} change with these {m} coins')
 
 
 main()

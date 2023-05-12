@@ -1,3 +1,13 @@
+"""
+
+Problem:
+
+Determine in how many ways you can separate an int n. For instance,
+n = 3 -> (1, 1, 1); (1, 2); (3) = 3 ways
+
+"""
+
+
 def line():
     print('==' * 40)
 
@@ -6,7 +16,7 @@ def ReadData():
     print('\n')
     line()
     n = int(input('\nType a value for n: '))
-    print('\n')
+    print('\b')
 
     return n
 

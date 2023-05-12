@@ -45,6 +45,7 @@ def Change(n, coin_index):
         return float('inf')
     if coin_index == m:
         return float('inf')
+
     # if there is an empty space
     if memory[n] == -1:
         # There are two possibilities: use or not the coin
