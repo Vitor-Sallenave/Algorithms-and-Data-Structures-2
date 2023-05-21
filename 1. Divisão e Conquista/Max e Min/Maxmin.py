@@ -1,4 +1,4 @@
-# O Seguinte algoritmo tem um enfoque não recursivo, porém usa metodologias referentes à Divisão e Conquista
+# O Seguinte algoritmo tem um enfoque não recursivo, porém usa metodologias referentes à 1. Divisão e Conquista
 
 
 def cabecalho():

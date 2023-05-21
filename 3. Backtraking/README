@@ -1,0 +1,29 @@
+-----------------------------
+WHAT IS BRUTEFORCE APPROACH?
+-----------------------------
+
+- Brute Force approach finds all the possible solutions and selects desired solution
+per given the constraints.
+
+- Dynamic Programming also uses Brute Force approach to find the OPTIMUM solution,
+either maximum or minimum.
+◼ Ex:
+
+----------------------
+WHAT IS BACKTRACKING?
+----------------------
+
+- Backtracking also uses Brute Force approach but in order to find ALL the possible solutions.
+We are not looking for an optimum solution in this case.
+◼ Ex: How two boys and a girl can be arranged in 3 chairs? 3!
+
+- Solutions to the Backtracking problems can be represented as State-Space Tree.
+
+- The constrained applied to find the solution is called Bounding function. In other words,
+if a bounding function is found, then this path is invalid and we must return in aim to
+keep working on the non explored paths.
+◼ Ex: The girl can't sit in the middle.
+
+- Backtracking follows Depth-First Search method.
+
+- Branch and Bound is also a Brute Force approach, which uses Breadth-First Search method.

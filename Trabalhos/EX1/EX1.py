@@ -31,15 +31,14 @@ def PrintArray(array):
     line()
 
 
-def IsEqual(array):
-    n = len(array)
+def IsEqual(array, n):
     if n == 1:
         return True
     elif n == 2:
         return array[0] == array[1]
     else:
-        left = IsEqual(array[0: n//2])
-        dir = IsEqual(array[n//2: n])
+        left = IsEqual(array[0: n//2], n//2)
+        dir = IsEqual(array[n//2: n], n - n//2)
         return left and dir
 
 
@@ -47,7 +46,7 @@ def main():
     Header()
     V = ReadData()
     PrintArray(V)
-    if IsEqual(V):
+    if IsEqual(V, len(V)):
         print(f'\nAll the elements are equal!')
     else:
         print(f"\nThe elements aren't all the same!")
