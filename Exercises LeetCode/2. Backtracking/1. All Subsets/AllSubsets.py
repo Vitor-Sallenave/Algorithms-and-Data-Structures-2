@@ -37,7 +37,7 @@ def AllSubsets(nums, i, subset, solutions):
         subset.append(nums[i])
         AllSubsets(nums, i + 1, subset, solutions)
 
-        # not including the number
+        # Not including the number
         subset.pop()
         AllSubsets(nums, i + 1, subset, solutions)
 
