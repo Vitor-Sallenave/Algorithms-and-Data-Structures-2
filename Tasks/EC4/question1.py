@@ -57,7 +57,11 @@ def Header():
     print('\b')
 
 
-def ReadData():
+def ReadTests():
+    return int(input('Enter a value for the number of tests: '))
+
+
+def ReadFiles():
     # Functions to return a sorting criteria
     def SortingCriteria1(array):
         return array[0]
@@ -71,10 +75,12 @@ def ReadData():
         array_sorted = sorted(array_sorted, key=SortingCriteria1, reverse=True)
         return array_sorted
 
-    # Reading the important information
+    # Reading the initial parameters
+    info = input('\nEnter a value for the full memory and the number of files: ').split()
+    k, m = int(info[0]), int(info[1])
+
+    # Reading the information about the files
     entry = list()
-    k = int(input('Enter a value for the full memory: '))
-    m = int(input('Enter a value for the number of files: '))
     for i in range(m):
         info = input(f'\nType the level and the size of the file [{i + 1}]: ').split()
         l, n = int(info[0]), int(info[1])
@@ -92,7 +98,7 @@ def MaxFiles(k, m, entry):
 
     for i in range(m - 1, -1, -1):
         file_size = entry[i][1]
-        if tot + file_size <= k:
+        if (tot + file_size) <= k:
             tot += file_size
             max_files += 1
         else:
@@ -103,10 +109,16 @@ def MaxFiles(k, m, entry):
 
 def main():
     Header()
-    k, m, entry = ReadData()
-    print(f'\bYour entry is: {entry}\n')
-    line()
-    print(f'\nThe maximum number of files that Alice can treat is {MaxFiles(k, m, entry)}')
+    t = ReadTests()
+    for i in range(t):
+        print('\b')
+        line()
+        print(f'\nTEST [{i + 1}]\n')
+        line()
+        k, m, entry = ReadFiles()
+        print(f'\nYour entry is: {entry}\n')
+        line()
+        print(f'\nThe maximum number of files that Alice can treat is {MaxFiles(k, m, entry)}')
 
 
 main()

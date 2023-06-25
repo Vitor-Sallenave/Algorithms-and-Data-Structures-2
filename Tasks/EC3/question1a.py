@@ -7,6 +7,7 @@ using "n" items with allowed repetitions.
 
 """
 
+
 def line():
     print('==' * 40)
 
@@ -33,13 +34,17 @@ def CreateP(size):
 
 
 def Arrange(n, q, P, np, Solutions):
+    global cont
+
     for i in range(n):
         # Fill P with this number
         P[np] = i
         # At this moment, a solution was found
-        if np == q-1:
+        if np == q - 1:
             Solutions.append(P)
-            print(P)
+            if cont < 100:
+                cont += 1
+                print(P)
         else:
             # Pass to the next possibility
             Arrange(n, q, P, np + 1, Solutions)
@@ -56,4 +61,5 @@ def main():
     print(f'\nThere are {len(Solutions)} ways of arranging {n} items in a group of size {q} with repetition')
 
 
+cont = 0
 main()
