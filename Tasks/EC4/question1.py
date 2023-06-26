@@ -101,8 +101,6 @@ def MaxFiles(k, m, entry):
         if (tot + file_size) <= k:
             tot += file_size
             max_files += 1
-        else:
-            break
 
     return max_files
 

@@ -43,6 +43,9 @@ def Comb(n, q, np, P, Solutions):
             else:
                 Comb(n, q, np + 1, P, Solutions)
 
+        if len(Solutions) == 100:
+            break
+
 
 def main():
     Header()
