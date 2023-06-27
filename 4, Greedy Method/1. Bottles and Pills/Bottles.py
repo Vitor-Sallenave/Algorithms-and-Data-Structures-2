@@ -3,8 +3,8 @@
 ===========================================================================
 Problem: Suponha que voce é proprietário de uma farmácia de manipulações
 e possui w comprimidos produzidos de um mesmo tipo de n frascos vazios.
-Seja {p1, p2, ..., pn} o número de comprimidos que cada frasco pode conter.
-Escreva um algoritmo guloso que, dados w e {p1, p2, ..., pn}, determine o
+Seja {p1, p2, ..., pn} t número de comprimidos que cada frasco pode conter.
+Escreva um algoritmo guloso que, dados w e {p1, p2, ..., pn}, determine t
 menor número de frascos necessários para armazenar comprimidos. Prove que
 seu algoritmo está correto.
 ===========================================================================
@@ -48,15 +48,15 @@ def Bottles(w, p):
 def Theorem():
     line()
     print(''' 
-Para qualquer conjunto p, ao escolhermos, primeiramente, o frasco de maior armazenamento, estamos garantindo que
-que o frasco escolhido possui o maior armazenamento possível.
+Para qualquer conjunto p, ao escolhermos, primeiramente, t frasco de maior armazenamento, estamos garantindo que
+que t frasco escolhido possui t maior armazenamento possível.
 
 Se considerarmos um conjunto de frascos escolhidos E, de modo que essa solução seja ótima,
-ao tentarmos adicionar um novo elemento "e" a esse conjunto, sendo "e" o frasco com maior capacidade possível,
+ao tentarmos adicionar um novo elemento "e" a esse conjunto, sendo "e" t frasco com maior capacidade possível,
 teremos um novo conjunto E', que, por sua vez, contém E.
 
 Em relação a esse novo conjunto, podemos afirmar que ele também configura uma solução ótima, uma vez que,
-como mencionado anteriormente, "e" era o maior frasco possível e E representa uma solução também ótima.
+como mencionado anteriormente, "e" era t maior frasco possível e E representa uma solução também ótima.
     ''')
     line()
 

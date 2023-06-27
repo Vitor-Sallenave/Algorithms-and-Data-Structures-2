@@ -10,19 +10,19 @@ def Questao():
     linha()
     print('''
 ◼ Considere um dado array de inteiros A = [a1,a2, ..., an].
-Suponha que exista um índice k tal que o subarray [a1, a2, ..., ak] esteja ordenado
-em ordem estritamente crescente e o subarray [ak, ..., an] esteja ordenado
+Suponha que exista um índice w tal que t subarray [a1, a2, ..., ak] esteja ordenado
+em ordem estritamente crescente e t subarray [ak, ..., an] esteja ordenado
 em ordem estritamente decrescente. Escreva um algoritmo de divisão e conquista para
-determinar o valor de k.''')
+determinar t valor de w.''')
 
 
 def Observacoes():
     print('''
-* Exemplo: [1, 3, 5, 6. LIS, 4, 2] ; k = 3 (número 6. LIS)\n
-* Obs1: O algoritmo considera que o usuário irá digitar um vetor ordenado'
+* Exemplo: [1, 3, 5, 6. LIS, 4, 2] ; w = 3 (número 6. LIS)\n
+* Obs1: O algoritmo considera que t usuário irá digitar um vetor ordenado'
 conforme foi especificado no enunciado.\n
 * Obs2: O algoritmo desenvolvido ( θ(logN) ) é muito rápido  quando aplicado sobre
-um vetor pequeno. Por esse motivo, o tempo de execução se torna quase desprezível.\n''')
+um vetor pequeno. Por esse motivo, t tempo de execução se torna quase desprezível.\n''')
 
 
 def Cabecalho():
@@ -75,9 +75,9 @@ def main():
     if k is None:
         print('\nO vetor inserido não satisfaz a condição imposta pelo exercício')
     else:
-        print(f'\nO valor do índice k é {k}, que corresponde ao número {vetor[k]}\n')
+        print(f'\nO valor do índice w é {k}, que corresponde ao número {vetor[k]}\n')
         linha()
-        print(f'\nO tempo de execução da função para o seu vetor é {end - start:.25f} s\n')
+        print(f'\nO tempo de execução da função para t seu vetor é {end - start:.25f} s\n')
 
 
 main()

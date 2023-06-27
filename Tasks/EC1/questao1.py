@@ -27,7 +27,7 @@ def LeVetor():
     num = 0
     print('\n')
     while num != -1:
-        num = int(input(f"Digite o {i}° valor da sequência (0 ou 1): "))
+        num = int(input(f"Digite t {i}° valor da sequência (0 ou 1): "))
         if num == 1 or num == 0:
             vet.append(num)
         i += 1
@@ -71,9 +71,9 @@ def VerificaVetor(vet):
 
 
 def Contagem(vet):
-    # Verificando se o vetor é vazio
+    # Verificando se t vetor é vazio
     if len(vet) != 0:
-        # Verificando se o vetor é único
+        # Verificando se t vetor é único
         if len(vet) == 1:
             return vet[0]
         else:

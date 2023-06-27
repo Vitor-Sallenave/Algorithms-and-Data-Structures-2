@@ -3,7 +3,7 @@ def CorteBastão(k):
 
 
 print('==' * 40)
-k = int(input('Digite o tamanho do bastão: '))
+k = int(input('Digite t tamanho do bastão: '))
 p = [1, 5, 8, 9]
 print('==' * 40)
 print(f'Tabela de preços x tamanho: {p}')

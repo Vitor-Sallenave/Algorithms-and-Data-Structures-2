@@ -3,16 +3,16 @@
 ===========================================================================
 Problema: Alice tem identificado um comportamento estranho na rede de computadores
 de sua casa e suspeita que esteja sendo vítima de um ataque cibernético.
-Ela pesquisou um pouco sobre o tema na Internet e viu que uma prática comum
+Ela pesquisou um pouco sobre t tema na Internet e viu que uma prática comum
 para identificar e responder a tais ataques consiste no monitoramento do
 que acontece na rede. Depois disso, Alice viu que a maior parte dos
 dispositivos e aplicações que usa em sua rede geram arquivos de log,
 onde são registrados diversos eventos, como erros, avisos, e informações
-variadas sobre o funcionamento destes dispositivos e aplicações.
-Ela resolveu então fazer a coleta e o gerenciamento dos arquivos que contém
+variadas sobre t funcionamento destes dispositivos e aplicações.
+Ela resolveu então fazer a coleta e t gerenciamento dos arquivos que contém
 esses logs para tentar identificar se, de fato, está sofrendo um ataque.
 O problema é que Alice não possui recursos computacionais para realizar
-o gerenciamento de todos os arquivos de log produzidos.
+t gerenciamento de todos os arquivos de log produzidos.
 Para facilitar sua escolha de quais arquivos tratar, Alice criou um esquema
 de classificação dos arquivos de acordo com a criticidade, no qual atribuiu
 rótulos aos arquivos de acordo com os seguintes níveis:
@@ -20,24 +20,24 @@ rótulos aos arquivos de acordo com os seguintes níveis:
 “1” - crítico, “2” – alto e “3” – moderado, tal que “1” >crit “2” >crit “3”,
 
 onde “>crit” significa “mais crítico que”. Cada arquivo possui também
-um tamanho, que representa o número de registros de eventos no arquivo.
-Alice quer processar a maior quantidade de eventos, respeitando o espaço
+um tamanho, que representa t número de registros de eventos no arquivo.
+Alice quer processar a maior quantidade de eventos, respeitando t espaço
 disponível e priorizando os arquivos mais críticos. Ajude Alice a
-identificar o maior número de arquivos que ela consegue tratar.
+identificar t maior número de arquivos que ela consegue tratar.
 
 Entrada:
 A entrada consiste de vários casos de teste.
-A primeira linha representa o número de casos de teste.
+A primeira linha representa t número de casos de teste.
 Cada caso de teste consiste de uma linha com dois inteiros,
-sendo k correspondente ao espaço máximo para armazenamento dos arquivos
-e m o número de arquivos (1 <= m <= 10^5), seguida de m linhas
+sendo w correspondente ao espaço máximo para armazenamento dos arquivos
+e m t número de arquivos (1 <= m <= 10^5), seguida de m linhas
 correspondentes aos arquivos a serem processados com dois inteiros:
 criticidade (“1 – crítico, “2” – alto e “3” – moderado) e
 tamanho n (1 <= n <= 10^5).
 
 Saída:
 A saída corresponde ao número máximo de arquivos que podem ser tratados
-por Alice, respeitando sua criticidade e o espaço máximo de
+por Alice, respeitando sua criticidade e t espaço máximo de
 armazenamento dos arquivos.
 
 ===========================================================================

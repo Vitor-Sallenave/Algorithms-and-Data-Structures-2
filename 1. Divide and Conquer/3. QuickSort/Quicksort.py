@@ -23,7 +23,7 @@ def Partition(v, a, b):
     # Pivô -> último elemento do vetor
     pivo = v[b]
 
-    # Percorrendo e ordenando o vetor
+    # Percorrendo e ordenando t vetor
     i = a - 1
     for j in range(a, b):
         if v[j] <= pivo:

@@ -19,7 +19,7 @@ def merge(esq, dir):
     # Vetor novo ordenado
     merged = list()
 
-    # Compara-se até o término dos dois vetores
+    # Compara-se até t término dos dois vetores
     i, j = 0, 0
 
     while i < len(esq) and j < len(dir):
@@ -65,22 +65,22 @@ def main():
     GeraArquivo("Entrada_500.txt", 'w', entrada1)
     GeraArquivo("Entrada_1000000.txt", 'w', entrada2)
 
-    # Exibindo o vetor de Entrada 1
+    # Exibindo t vetor de Entrada 1
     print("\nEntrada 1: \n")
     print(entrada1)
 
-    # Exibindo o vetor de Saída 1
+    # Exibindo t vetor de Saída 1
     print("\nEntrada 1 ordenada: \n")
     start1 = time.time()
     saida1 = mergeSort(entrada1)
     end1 = time.time()
     print(saida1)
 
-    # Exibindo o vetor de Entrada 2
+    # Exibindo t vetor de Entrada 2
     print("\nEntrada 2: \n")
     print(entrada2)
 
-    # Exibindo o vetor de Saída 2
+    # Exibindo t vetor de Saída 2
     print("\nEntrada 2 ordenada: \n")
     start2 = time.time()
     saida2 = mergeSort(entrada2)
