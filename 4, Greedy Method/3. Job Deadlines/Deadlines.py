@@ -26,7 +26,7 @@ def Reference():
     print('\n◼ Reference - https://youtu.be/zPtI8q9gvX8\n')
 
 
-def ReadProducts():
+def ReadTasks():
     # Functions to return a sorting criteria
     def SortingCriteria1(array):
         return array[1]
@@ -51,7 +51,7 @@ def ReadProducts():
     # Sorting the entry by the profit
     sorted_entry = sorted(entry, key=SortingCriteria1)
 
-    return w, t, sorted_entry, tasks_table
+    return t, sorted_entry, tasks_table
 
 
 def MaxProfit(t, entry, tasks_table):
@@ -81,10 +81,10 @@ def MaxProfit(t, entry, tasks_table):
 
 def main():
     Header()
-    w, t, entry, tasks_table = ReadProducts()
+    t, entry, tasks_table = ReadTasks()
     print(f'\bYour entry is: {entry}\n')
     line()
-    print(f'\nThe maximum profit that you can earn your job is {MaxProfit(w, t, entry, tasks_table)}')
+    print(f'\nThe maximum profit that you can earn your job is {MaxProfit(t, entry, tasks_table)}')
 
 
 main()
