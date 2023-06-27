@@ -20,6 +20,12 @@ def Header():
     print('\b')
 
 
+def Reference():
+    print('\b')
+    line()
+    print('\n◼ Reference - https://youtu.be/oTTzNMHM05I\n')
+
+
 def ReadProducts():
     # Functions to return a sorting criteria
     def SortingCriteria1(array):
@@ -61,6 +67,7 @@ def main():
     print(f'\bYour entry is: {entry}\n')
     line()
     print(f'\nThe maximum profit that the traveler can earn is {MaxProfit(k, o, entry)}')
+    Reference()
 
 
 main()

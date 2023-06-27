@@ -5,7 +5,6 @@ Problem: Calculate the maximum profit you can generate by solving tasks in
 basis in the workload of your company.
 ===========================================================================
 
-◼ Reference - https://youtu.be/zPtI8q9gvX8
 """
 
 
@@ -19,6 +18,12 @@ def Header():
     print(f'\n{"Author: Vítor Sallenave Sales Milome ©":^75}\n')
     line()
     print('\b')
+
+
+def Reference():
+    print('\b')
+    line()
+    print('\n◼ Reference - https://youtu.be/zPtI8q9gvX8\n')
 
 
 def ReadProducts():
