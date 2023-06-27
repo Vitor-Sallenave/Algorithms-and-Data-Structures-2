@@ -41,7 +41,7 @@ def ReadProducts():
     line()
     print('\b')
 
-    # Sorting the array by the level
+    # Sorting the array by the profit
     return k, o, sorted(entry, key=SortingCriteria1)
 
 
