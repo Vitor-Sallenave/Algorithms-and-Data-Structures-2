@@ -40,25 +40,43 @@ def ReadData(option):
     return arr
 
 
-def CircularPermutation(array):
-    if not array:
-        return []
+def CreateS(n):
+    return [False] * (n - 1)
 
-    permutations = []
 
-    for i in range(len(array)):
-        permutations.append(array[i:] + array[:i])
+def CreateP(n):
+    return [-1 for _ in range(n)]
 
-    return permutations
+
+def CircularPermutation(array, np, S, P, Solutions):
+    n = len(array) - 1
+    for i in range(n):
+        if not S[i]:
+            S[i] = True
+            # Fill P with this number
+            P[np] = array[i]
+            # At this moment, a solution was found
+            if np == n - 1:
+                Solutions.append(P)
+                print(f'{P}\n')
+            else:
+                # Pass to the next possibility
+                CircularPermutation(array, np + 1, S, P, Solutions)
+            S[i] = False
 
 
 def main():
     Header()
     array = ReadData(ReadOption())
-    answer = CircularPermutation(array)
-    print(f'→ Circular Arrangements:\n\n{answer}\n')
+    n = len(array)
+    P = CreateP(n)
+    P[n - 1] = n
+    S = CreateS(n)
+    Solutions = list()
+    print(f'→ Circular Arrangements:\n')
+    CircularPermutation(array, 0, S, P, Solutions)
     line()
-    print(f'\nThere are {len(answer)} ways of arranging {len(array)} items in a circular way\n')
+    print(f'\nThere are {len(Solutions)} ways of arranging {len(array)} items in a circular way\n')
 
 
 main()

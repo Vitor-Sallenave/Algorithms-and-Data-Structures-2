@@ -48,7 +48,7 @@ def main():
     A = LeArquivo("Entrada_1000000.txt", 'r')
     B = LeArquivo("Entrada_500.txt", 'r')
 
-    # Medição do tempo do QuickSort aplicado a um vetor não ordenado
+    # Medição do tempo do 3. QuickSort aplicado a um vetor não ordenado
     start1 = time()
     QuickSort(A, 0, 999999)
     end1 = time()
