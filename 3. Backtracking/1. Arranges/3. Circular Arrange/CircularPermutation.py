@@ -1,3 +1,13 @@
+"""
+
+===========================================================================
+Problem: Calculate the circular arrangements that can be performed using
+n elements.
+===========================================================================
+
+"""
+
+
 def line():
     print('==' * 40)
 
@@ -25,14 +35,14 @@ def ReadData(option):
     elif option == 2:
         # Example array
         arr = [i for i in range(1, 101)]
-
     line()
     print('\b')
+
     return arr
 
 
 def CreateS(n):
-    return [False] * (n - 1)
+    return [False for _ in range(n)]
 
 
 def CreateP(n):
@@ -41,18 +51,22 @@ def CreateP(n):
 
 def CircularPermutation(array, np, S, P, Solutions):
     n = len(array) - 1
+
     for i in range(n):
         if not S[i]:
-            S[i] = True
             # Fill P with this number
             P[np] = array[i]
+            # Mark on S that the number was used
+            S[i] = True
             # At this moment, a solution was found
             if np == n - 1:
                 Solutions.append(P)
                 print(f'{P}\n')
             else:
-                # Pass to the next possibility
+                # Pass to a different element that can be part of the solution
                 CircularPermutation(array, np + 1, S, P, Solutions)
+
+            # Avoiding repetitions
             S[i] = False
 
 
@@ -61,8 +75,9 @@ def main():
     array = ReadData(ReadOption())
     n = len(array)
     P = CreateP(n)
+    # Fixing the last element
     P[n - 1] = n
-    S = CreateS(n)
+    S = CreateS(n - 1)
     Solutions = list()
     print(f'→ Circular Arrangements:\n')
     CircularPermutation(array, 0, S, P, Solutions)
