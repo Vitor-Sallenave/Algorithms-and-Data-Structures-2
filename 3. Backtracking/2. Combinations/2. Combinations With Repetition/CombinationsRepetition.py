@@ -2,7 +2,7 @@
 
 ===========================================================================
 Problem: Calculate the number of size "q" combinations that can be done by
-using "n" items with repetition.
+using "n" items with repetition allowed.
 ===========================================================================
 
 """

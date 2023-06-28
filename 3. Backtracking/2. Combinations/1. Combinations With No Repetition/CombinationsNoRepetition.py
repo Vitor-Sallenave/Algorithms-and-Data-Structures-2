@@ -34,9 +34,11 @@ def CreateP(size):
 
 
 def Comb(n, q, np, P, Solutions):
-    for k in range(1, n + 1):
-        if k > P[np - 1]:
-            P[np] = k
+    for i in range(1, n + 1):
+        # Verifying if the element is greater than the previous one.
+        # This strategy avoids combinations like: (a, b) and (b, a), that are the same
+        if i > P[np - 1]:
+            P[np] = i
             if np == q:
                 Solutions.append(P[1:])
                 print(f'{P[1:]}\n')
@@ -47,7 +49,7 @@ def Comb(n, q, np, P, Solutions):
 def main():
     Header()
     n, q = ReadData()
-    P = CreateP(q+1)
+    P = CreateP(q + 1)
     P[0] = 0
     Solutions = list()
     print('→ Combinations:\n')
