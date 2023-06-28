@@ -43,6 +43,7 @@ The course that has been previously mentioned aims to discuss the different exis
    - Optimal Merge Pattern
    - Minimum Change
    - Tasks Selection
+   - Minimum Segment Coverage
 
 
 
