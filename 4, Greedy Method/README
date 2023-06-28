@@ -1,0 +1,15 @@
+====================================================================================
+
+Theorem 1: (Cowen, Cowen & Steinberg)
+"Consider Ck = {a1, a2, ...ak} a greedy coins set,
+Ck+1 = {a1, a2, ...ak, ak+1} and m = ⎡ak+1/ak⎤.
+Then, Ck+1 is a greedy set only if G(Ck+1, m.ak) ≤ m"
+
+Examples:
+
+Proving that {1, 5, 12} is not a greedy set:
+1) C1 = {1} is greedy, thus it only has one solution.
+2) C2 = {1, 5} is greedy, on account of m = ⎡5/1⎤ = 5 and G(C2, 5.1) = 1 ≤ 5.
+3) C3 = {1, 5, 12} is NOT greedy, thus m = ⎡12/5⎤ = 3 and G(C3, 3.5 = 15) = 4 > 3
+
+====================================================================================
