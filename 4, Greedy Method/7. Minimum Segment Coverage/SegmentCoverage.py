@@ -50,17 +50,23 @@ def Coverage(entry, a, b):
     segments, x, y = 0, a, 0
 
     for i in range(len(entry)):
-        # The segment was selected
-        if entry[i][0] > x:
+        # Information
+        start = entry[i][0]
+        end = entry[i][1]
+
+        # The segment is valid
+        if start > x:
+            # Current reference
             x = entry[y][1]
-            segments += 1
 
             # Verifying if the interval was overtaken
             if x >= b:
                 break
-            elif entry[i][1] > entry[y][1]:
-                # Comparing the new element with the one that has the current max end
+            elif end > entry[y][1]:
+                # The segment was selected and segment "i" pass to be the last added
                 y = i
+
+            segments += 1
 
     return segments
 
