@@ -17,9 +17,32 @@ The course that has been previously mentioned aims to discuss the different exis
 ---
 
 1. Divide and Conquer 🗺️
+   - Max and Min
+   - MergeSort
+   - QuickSort
 2. Dynamic Programming 📖
-3. Backtracking ♟️
+   - Fibonacci
+   - Coins
+   - Change
+   - Integers Partition
+   - Rod Cutting
+   - LIS
+   - LCS
+   - Knapsack Problem
+   - Knapsack Problem with Repetition 
+   - Minimum Edition Distance 
+3. Backtracking ♟
+   - Arranges ️
+   - Circular Arranges
+   - Combinations
+   - N Queens Problem
 4. Greedy Method ⚖️
+   - Bottles and Pills
+   - Knapsack Problem
+   - Job Deadlines
+   - Optimal Merge Pattern
+   - Minimum Change
+   - Tasks Selection
 
 
 
