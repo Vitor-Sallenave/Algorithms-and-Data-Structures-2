@@ -75,7 +75,7 @@ def main():
     array = ReadData(ReadOption())
     n = len(array)
     P = CreateP(n)
-    # Fixing the last element
+    # Fixing the last element, so that we can arrange the remaining elements
     P[n - 1] = n
     S = CreateS(n - 1)
     Solutions = list()
