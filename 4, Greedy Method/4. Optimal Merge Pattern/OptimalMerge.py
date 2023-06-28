@@ -42,29 +42,37 @@ def ReadFiles():
     # Sorting the entry by the size
     sorted_entry = sorted(entry, reverse=True)
 
-    return f, sorted_entry
+    return sorted_entry
 
 
-def OptimalMerge(f, entry):
+def OptimalMerge(entry):
     coast = 0
 
     while len(entry) > 1:
-        current_sum = 0
-        for _ in range(2):
-            current_sum += min(entry)
-            entry.pop(entry.index(min(entry)))
-        entry.append(current_sum)
-        coast += current_sum
+        combined_sum = 0
+
+        # Calculating the combined sum
+        for i in range(2):
+            combined_sum += entry[i]
+
+        # Removing the combined elements
+        entry.pop(0)
+        entry.pop(0)
+
+        # Creating new nodes
+        entry.append(combined_sum)
+
+        coast += combined_sum
 
     return coast
 
 
 def main():
     Header()
-    f, entry = ReadFiles()
+    entry = ReadFiles()
     print(f'\bYour entry is: {entry}\n')
     line()
-    print(f'\nThe total coast of merging is {OptimalMerge(f, entry)}')
+    print(f'\nThe total coast of merging is {OptimalMerge(entry)}')
     Reference()
 
 
