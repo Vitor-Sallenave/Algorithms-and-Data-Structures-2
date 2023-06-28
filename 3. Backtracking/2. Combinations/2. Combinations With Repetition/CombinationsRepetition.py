@@ -36,11 +36,12 @@ def CreateP(size):
 def Comb(n, q, np, i, P, Solutions):
     for k in range(i, n + 1):
         P[np] = k
+        # We find a solution
         if np == q - 1:
             Solutions.append(P)
             print(f'{P}\n')
         else:
-            Comb(n, q, np + 1, i + 1, P, Solutions)
+            Comb(n, q, np + 1, k, P, Solutions)
 
 
 def main():
