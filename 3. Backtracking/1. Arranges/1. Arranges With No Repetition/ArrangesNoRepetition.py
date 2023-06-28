@@ -38,6 +38,7 @@ def CreateP(size):
 
 
 def Arrange(S, n, q, P, np, Solutions):
+    # Going through the possible arrangements that can be done with each element
     for i in range(n):
         # Verifying if the number was not used
         if not S[i]:
@@ -46,14 +47,15 @@ def Arrange(S, n, q, P, np, Solutions):
             # Mark on S that the number was used
             S[i] = True
             # At this moment, a solution was found
-            if np == q-1:
+            if np == q - 1:
                 Solutions.append(P)
                 print(P)
             else:
-                # Pass to the next possibility
+                # Pass to a different element that can be part of the solution
                 Arrange(S, n, q, P, np + 1, Solutions)
 
             # This part below enables the function to control possible repetitions
+            # while generating the permutations of an element
             S[i] = False
 
 
