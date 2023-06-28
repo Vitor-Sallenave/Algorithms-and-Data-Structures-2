@@ -37,11 +37,11 @@ def Arrange(n, q, P, np, Solutions):
         # Fill P with this number
         P[np] = i
         # At this moment, a solution was found
-        if np == q-1:
+        if np == q - 1:
             Solutions.append(P)
             print(P)
         else:
-            # Pass to the next possibility
+            # Pass to the next element (can be either the equal or different from the current one)
             Arrange(n, q, P, np + 1, Solutions)
 
 
