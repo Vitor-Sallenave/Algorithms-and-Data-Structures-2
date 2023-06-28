@@ -30,7 +30,7 @@ def ReadFiles():
     # Reading the initial parameter
     f = int(input('\bEnter a value for the number of files: '))
 
-    # Reading the information about the tasks
+    # Reading the information about the files
     entry = list()
     for i in range(f):
         size = int(input(f'\nType the size of the file [{i + 1}]: '))
