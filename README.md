@@ -20,6 +20,7 @@ The course that has been previously mentioned aims to discuss the different exis
    - Maximum and Minimum
    - MergeSort
    - QuickSort
+   
 2. Dynamic Programming 📖
    - Fibonacci
    - Coins
@@ -31,6 +32,7 @@ The course that has been previously mentioned aims to discuss the different exis
    - Knapsack Problem
    - Knapsack Problem with Repetition 
    - Minimum Edition Distance 
+   
 3. Backtracking ♟
    - Arranges 
      - Arranges with(out) Repetition ️ 
@@ -43,6 +45,7 @@ The course that has been previously mentioned aims to discuss the different exis
      - All Subsets
      - Partition Subsets
      - Sum Subsets
+
 4. Greedy Method ⚖️
    - Bottles and Pills
    - Knapsack Problem
