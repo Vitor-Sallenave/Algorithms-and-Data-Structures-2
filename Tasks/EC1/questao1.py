@@ -6,8 +6,8 @@ def Questao():
     linha()
     print(f'{"TRABALHO EC1 - QUESTÃO 1":^75}')
     linha()
-    print('\n◼ Digite uma sequência de bits ("0"s e "1"s), onde todos\nos bits "1"s\
-aparecem antes dos bits "0"s: ')
+    print('\n◼ Digite uma sequência de bits ("0"target_sum e "1"target_sum), onde todos\nos bits "1"target_sum\
+aparecem antes dos bits "0"target_sum: ')
 
 
 def Observacoes():
@@ -88,7 +88,7 @@ def main():
     vetor = LeVetor()
     bits = PrintaVetor(vetor)
     VerificaVetor(vetor)
-    print(f'\nHá um total de {Contagem(vetor)} "1"s no vetor {bits}')
+    print(f'\nHá um total de {Contagem(vetor)} "1"target_sum no vetor {bits}')
 
 
 main()

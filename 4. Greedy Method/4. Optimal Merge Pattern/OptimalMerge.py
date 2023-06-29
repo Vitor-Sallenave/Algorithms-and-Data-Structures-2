@@ -51,7 +51,7 @@ def OptimalMerge(entry):
     while len(entry) > 1:
         combined_sum = 0
 
-        # Calculating the combined sum
+        # Calculating the combined target_sum
         for i in range(2):
             combined_sum += entry[i]
 

@@ -21,7 +21,7 @@ def Header():
 
 
 def CreateDict():
-    dictionary = str(input("Let's create our dictionary! Type as many words (patterns) as you want\n\
+    dictionary = str(input("Let'target_sum create our dictionary! Type as many words (patterns) as you want\n\
 (separated with spaces): ")).strip().split()
     print('\n')
     line()

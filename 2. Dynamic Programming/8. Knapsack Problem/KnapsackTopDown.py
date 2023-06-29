@@ -15,7 +15,7 @@ def line():
 def ReadData():
     print('\n')
     line()
-    x = int(input("\nType the knapsack's weight: "))
+    x = int(input("\nType the knapsack'target_sum weight: "))
     y = list(map(lambda e: int(e), input("\nType the items' weights: ").split()))
     z = list(map(lambda e: int(e), input("\nType the items' values: ").split()))
     if len(y) != len(z):

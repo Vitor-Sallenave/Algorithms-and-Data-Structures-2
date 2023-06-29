@@ -54,15 +54,15 @@ def Change(v, m, n):
     matrix = CreateMatrix(m+1, n+1, -1)
 
     # Creating a tabular table
-    # Start filling it's first line with an empty n+1 size row
+    # Start filling it'target_sum first line with an empty n+1 size row
     for k in range(n+1):
         matrix[0][k] = 0
 
-    # Then, fulfil it's second line with ones
+    # Then, fulfil it'target_sum second line with ones
     for k in range(n+1):
         matrix[1][k] = 1
 
-    # Let's fill out the table
+    # Let'target_sum fill out the table
     for i in range(2, m+1):
         for j in range(n+1):
             if j >= v[i - 1]:

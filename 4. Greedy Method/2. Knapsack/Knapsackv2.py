@@ -2,7 +2,7 @@
 
 ===========================================================================
 Problem: Calculate the maximum profit a traveler can gain by selling his
-list of products. In this problem, consider dividing a product's weight
+list of products. In this problem, consider dividing a product'target_sum weight
 when it is necessary in order to enhance the profit.
 ===========================================================================
 

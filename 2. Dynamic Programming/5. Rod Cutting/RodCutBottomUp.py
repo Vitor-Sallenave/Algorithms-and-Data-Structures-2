@@ -16,7 +16,7 @@ def line():
 def ReadData():
     print('\n')
     line()
-    x = int(input("\nType the rod's size: "))
+    x = int(input("\nType the rod'target_sum size: "))
     print('\b')
 
     return x

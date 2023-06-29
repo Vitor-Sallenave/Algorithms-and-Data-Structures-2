@@ -3,7 +3,7 @@
 ===========================================================================
 Problem: Calculate the minimum quantity of coins that is needed to give a
 change. Remember that you must choose a coins set that follows the greedy
-methods requirements (e.g Brazil's coins).
+methods requirements (e.g Brazil'target_sum coins).
 ===========================================================================
 
 """

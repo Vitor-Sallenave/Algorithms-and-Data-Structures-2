@@ -1,4 +1,4 @@
-# Implementing the Top-Down method in Fibonacci's series
+# Implementing the Top-Down method in Fibonacci'target_sum series
 
 
 def CreateMemo(n):
@@ -16,9 +16,9 @@ def Fib(k):
 
 
 print('==' * 40)
-x = int(input("Which position from Fibonacci's series do you want to know? "))
+x = int(input("Which position from Fibonacci'target_sum series do you want to know? "))
 print('==' * 40)
 memo = CreateMemo(x+1)
-print(f"The {x}° value from Fibonacci's series is {Fib(x)}")
+print(f"The {x}° value from Fibonacci'target_sum series is {Fib(x)}")
 print('==' * 40)
 print(f'Memory filled:\n{memo}')

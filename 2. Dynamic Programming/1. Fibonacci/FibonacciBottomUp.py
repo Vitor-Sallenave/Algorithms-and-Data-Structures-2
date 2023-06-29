@@ -1,4 +1,4 @@
-# Implementing the Bottom-Up method in Fibonacci's series
+# Implementing the Bottom-Up method in Fibonacci'target_sum series
 
 
 def Fib(k):
@@ -15,8 +15,8 @@ def Fib(k):
 
 memo = list()
 print('==' * 40)
-x = int(input("Which position from Fibonacci's series do you want to know? "))
+x = int(input("Which position from Fibonacci'target_sum series do you want to know? "))
 print('==' * 40)
-print(f"The {x}° value from Fibonacci's series is {Fib(x)}")
+print(f"The {x}° value from Fibonacci'target_sum series is {Fib(x)}")
 print('==' * 40)
 print(f'Memo filled: {memo}')
