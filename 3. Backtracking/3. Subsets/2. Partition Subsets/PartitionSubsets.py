@@ -25,30 +25,34 @@ def ReadData():
     print('\b')
     line()
     print('\b')
-    return array
+    return sorted(array)
 
 
 def CreateS(size):
     return [0 for _ in range(size)]
 
 
-def Keep(S, ns):
-    print(f'{S[:ns + 1]}\n')
-
-
-def PartitionSumSubsets(C, s, dif, msmp, ns, t, tot, n, S):
+def PartitionSumSubsets(C, s, dif, max_sum, ns, t, tot, S):
     i = t
+    n = len(C)
 
-    while i <= n and (s + C[i]) < msmp:
-        S[ns] = i
+    # Pruning the recursion tree
+    while i < n and (s + C[i]) < max_sum:
+        S[ns] = C[i]
         s += C[i]
 
+        # If adding a new element maintains the difference between the 2 subsets less than dif,
+        # then it is a possibility
         if abs(tot - 2 * s) < dif:
-            Keep(S, ns)
+            print(f'{S[:ns + 1]}\t->\t{list(set(C) - set(S[:ns + 1]))}')
+            # Updating the difference
             dif = abs(tot - 2 * s)
-            msmp = max(s, tot - s)
+            # Updating the max sum between the subsets
+            max_sum = max(s, tot - s)
 
-        PartitionSumSubsets(C, s, dif, msmp, ns + 1, i + 1, tot, n, S)
+        # Passing to the next possible subset
+        PartitionSumSubsets(C, s, dif, max_sum, ns + 1, i + 1, tot, S)
+
         s -= C[i]
         i += 1
 
@@ -57,7 +61,17 @@ def main():
     Header()
     C = ReadData()
     S = CreateS(len(C))
-    PartitionSumSubsets(C, 0, float('inf'), float('inf'), 0, 0, sum(C), len(C), S)
+
+    # Total sum of the set
+    tot = sum(C)
+
+    # Difference between the 2 initial divided subsets
+    dif = abs(tot - 2 * C[0])
+
+    # Verifying which part has a greater sum
+    max_sum = max(C[0], tot - C[0])
+
+    PartitionSumSubsets(C, C[0], dif, max_sum, 0, 0, tot, S)
     line()
 
 
