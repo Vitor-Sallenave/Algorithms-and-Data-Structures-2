@@ -17,7 +17,7 @@ The course that has been previously mentioned aims to discuss the different exis
 ---
 
 1. Divide and Conquer 🗺️
-   - Max and Min
+   - Maximum and Minimum
    - MergeSort
    - QuickSort
 2. Dynamic Programming 📖
@@ -32,10 +32,17 @@ The course that has been previously mentioned aims to discuss the different exis
    - Knapsack Problem with Repetition 
    - Minimum Edition Distance 
 3. Backtracking ♟
-   - Arranges ️
-   - Circular Arranges
+   - Arranges 
+     - Arranges with(out) Repetition ️ 
+     - N Queens Problem
+     - Sudoku 
+     - Circular Arranges
    - Combinations
-   - N Queens Problem
+     - Combinations with(out) Repetition
+   - Subsets
+     - All Subsets
+     - Partition Subsets
+     - Sum Subsets
 4. Greedy Method ⚖️
    - Bottles and Pills
    - Knapsack Problem
